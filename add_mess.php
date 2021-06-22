@@ -1,12 +1,13 @@
 <?php
 require 'config.php';
-$user_id=$_POST['user_id'];
+session_start();
+$user_id=$_SESSION['user']['id'];
 $to_user_id=$_POST['to_user_id'];
 $r_time=$_POST['r_time'];
 $type=$_POST['type'];
-$text=$_POST['text'];
+$text=$_POST['xabar'];
 
-$sql="INSERT INTO users(user_id,to_user_id,r_time,type,text) VALUES ('".$user_id."','".$to_user_id."','".$r_time."','".$type."','".$text."')";
+$sql="INSERT INTO users(user_id,to_user_id,type,text) VALUES ('".$user_id."','".$to_user_id."','".$type."','".$text."')";
 echo $sql;
 $result=$conn->query($sql);
 if($result){
@@ -22,7 +23,7 @@ if($result){
 <?php include 'generate/head.php'; ?>
 <body>
     <div class="container">
-    <form action="add_user.php" method="post" >
+    <form action="add_mess.php" method="post" >
     <h2>Yangi xabar</h2>
     <div class="form-group">
         <label for="to_user_id">Foydalanuvchi </label>
@@ -40,7 +41,7 @@ if($result){
     </div>
     <div class="form-group">
         <label for="Xabar">Xabar</label>
-        <textarea cols="30" rows="5" name="Xsabar" class="form-control"></textarea>
+        <textarea cols="30" rows="5" name="xabar" class="form-control"></textarea>
     </div>
    
     

@@ -4,7 +4,7 @@ require 'config.php';
 $level=$_POST['level'];
 $sub_id=$_POST['sub_id'];
 $nomi=$_POST['nomi'];
-$sql = "INSERT INTO `corp` ( `level`, `sub_id`, `name`) VALUES ('".$level."', '".$sub_id."', '".$name."');";
+$sql = "INSERT INTO `corp` ( `level`, `sub_id`, `name`) VALUES ('".$level."', '".$sub_id."', '".$nomi."');";
 //echo $sql;
 $result=$conn->query($sql);
 if($result){
