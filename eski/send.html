@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 200px;">
+    <form action="send.html" method="get">
+
+        Kimga xabar jo'natmoqchisiz ?
+        <br>
+        <select name="xabar_turi" class="form-control">
+            <option value="1">Elektron politsiya (ePolice)</option>
+            <option value="2">Xafsizlik tizimi (Safe City)</option>
+            <option value="3">Elektron talim (eEducation)</option>
+            <option value="4">Elektron sog'liqni saqlash (eHealth)</option>
+        </select>
+        <br>
+        Xabarni kiriting
+        <br>
+        <textarea name="xabar" id="" cols="30" rows="10" class="form-control"></textarea>
+        <br>
+        <input type="submit" value="Jo'natish" class="btn btn-success">
+        
+       
+    </form>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
