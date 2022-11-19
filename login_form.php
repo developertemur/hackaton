@@ -2,7 +2,7 @@
 <input type="text" id="user_password">
 <button type="button" class="btn btn-default" id="kirish">Kirish</button>
 <script>
-//555
+//main
 $("#kirish").click(function(){
     
     var post={
